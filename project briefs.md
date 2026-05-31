@@ -4,7 +4,7 @@
 |:------:|------|:----:|------------|
 | [1](#team-1) | 이사장님 | 연구 | 테스트 이미지의 도메인을 자동으로 파악해 텍스트와 이미지 임베딩을 동적으로 재조합함으로써 도메인 변화에도 정확한 CLIP 기반 Zero-Shot 이미지 분류 연구 |
 | [2](#team-2) | Sudo | 산학 | HealthMate AI: 불규칙한 생활 속 2030을 위한 고혈압·당뇨 위험군 대상 식단 인식·코칭 통합 헬스케어 플랫폼 |
-| [3](#team-3) | Alltology | 연구 | 일반 벤치마크를 활용한 LLM 내부 파라미터 확장과 온톨로지 기반 지식 증강 기법의 실증적 성능 비교 및 융합 방법론 연구 |
+| [3](#team-3) | Alltology | 연구 | 검색 결과와 내부 지식이 충돌할 때: RAG Knowledge Conflict를 Preference Learning(DPO+LoRA)으로 해결하는 연구 |
 | [5](#team-5) | 규교굥 | 산학 | On-device 로컬 LLM 기술을 사용하여 플레이어 맞춤형 힌트를 실시간으로 제공하는 1인칭 3D 공포 방탈출 게임 |
 | [6](#team-6) | Greenfield | 산학 | 	AI 역사 인물 인터랙션과 다국어 스토리 콘텐츠 기반 역사 관광 활성화 웹 플랫폼 |
 | [7](#team-7) | reverdir | 산학 | 익명 매칭부터 미션, 쪽지, 힌트, 랭킹, 정체 공개까지 마니또 활동 전 과정을 지원하는 마니또 소셜 플랫폼 |
@@ -80,22 +80,22 @@
 
 | 항목 | 내용 |
 |------|------|
-| 프로젝트명 | 일반 벤치마크를 활용한 LLM 내부 파라미터 확장과 온톨로지 기반 지식 증강 기법의 실증적 성능 비교 및 융합 방법론 연구 |
-| 서비스명(브랜드) | |
+| 프로젝트명 | 검색 결과와 내부 지식이 충돌할 때: Preference Learning 기반 RAG 정렬 연구 |
+| 서비스명(브랜드) | Alltology |
 | 트랙 | 연구 |
 | 팀명 | Alltology |
-| 팀구성 | 박세령, 이다영, 손현경 |
+| 팀구성 | 박세령, 손현경, 이다영 |
 | 팀지도교수 | 황의원 교수님 |
-| 무엇을 만들고자 하는가 | 기존 모델과 온톨로지가 탑재된 모델의 성능(정확도) 비교한 연구논문 |
-| 고객 (누구를 위해) | LLM 모델의 답변 정확도 향상 |
-| Pain Point (해결할 문제) | 할루시네이션을 비롯한 정확도 문제를 개선하기 위해서 |
-| 사용 기술 | 온톨로지 |
-| 개발환경 | 1. 클라이언트 및 플랫폼 (Client & Platform)<br>Target: 웹 브라우저 기반 (Multi-Device 지원)<br>환경: 데스크톱/노트북(Windows, Mac, Linux) 및 모바일 브라우저 최적화<br>특이사항: 별도의 네이티브 앱(iOS/Android)이나 엔진(Unity/Unreal)을 사용하지 않는 Web-Standard 방식 채택<br><br>2. 프론트엔드 (Front-end)<br>Framework: Vue 3 (Composition API)<br>Build Tool: Vite (고속 번들링 및 개발 서버)<br>Key Libraries:<br>1. UI/Design: Vuestic UI, Element Plus, Tailwind CSS<br>2. Visualization: vis-network (온톨로지 그래프 시각화 핵심)<br>3. Content: marked, github-markdown-css (문서 렌더링)<br>4. Communication: axios, vue-router<br><br>3. 백엔드 (Back-end)<br>Language: Python 3.x<br>Framework: FastAPI (고성능 비동기 API 프레임워크)<br>Server: Uvicorn (ASGI)<br>Key Libraries: <br>1. Core: Pydantic (데이터 검증), python-dotenv (환경 변수 관리) <br>2. Async: FastAPI CORS Middleware, Threading (LLM 작업 병렬 처리)<br><br>4. 데이터 관리 (Data Management)<br>Storage Strategy: File System Based Storage (No-DB Architecture)<br><br>5. 외부 서비스 및 AI 모델 (External API & AI)<br>Main LLM: OpenAI API (GPT-5 계열 모델)<br>
-| 사용하는 소프트웨어 URL | 1. 클라이언트 및 플랫폼 (Client & Platform)<br>Target: 웹 브라우저 기반 (Multi-Device 지원)<br>환경: 데스크톱/노트북(Windows, Mac, Linux) 및 모바일 브라우저 최적화<br>특이사항: 별도의 네이티브 앱(iOS/Android)이나 엔진(Unity/Unreal)을 사용하지 않는 Web-Standard 방식 채택<br><br>2. 프론트엔드 (Front-end)<br>Framework: Vue 3 (Composition API)<br>Build Tool: Vite (고속 번들링 및 개발 서버)<br>Key Libraries:<br>1. UI/Design: Vuestic UI, Element Plus, Tailwind CSS<br>2. Visualization: vis-network (온톨로지 그래프 시각화 핵심)<br>3. Content: marked, github-markdown-css (문서 렌더링)<br>4. Communication: axios, vue-router<br><br>3. 백엔드 (Back-end)<br>Language: Python 3.x<br>Framework: FastAPI (고성능 비동기 API 프레임워크)<br>Server: Uvicorn (ASGI)<br>Key Libraries: <br>1. Core: Pydantic (데이터 검증), python-dotenv (환경 변수 관리) <br>2. Async: FastAPI CORS Middleware, Threading (LLM 작업 병렬 처리)<br><br>4. 데이터 관리 (Data Management)<br>Storage Strategy: File System Based Storage (No-DB Architecture)<br><br>5. 외부 서비스 및 AI 모델 (External API & AI)<br>Main LLM: OpenAI API (GPT-5 계열 모델)<br>
-| 기대 효과 | 미디어 분야의 LLM 모델의 답변 정확도 향상 (헐루시네이션 감소 효과) |
+| 무엇을 만들고자 하는가 | RAG(Retrieval-Augmented Generation)에서 검색된 외부 문서와 LLM 내부 학습 지식이 서로 다른 답을 가리키는 "Knowledge Conflict" 상황을 DPO + LoRA로 해결하는 연구. 기업 문서 검색·법률·의료처럼 정보 버전이 자주 바뀌고 오답의 파급 효과가 큰 도메인에서, RAG가 최신 외부 문서를 올바르게 우선하도록 Preference Learning으로 내재화한다. |
+| 고객 (누구를 위해) | 사내 문서 검색 시스템, 법률 정보 RAG, 의료 가이드라인 챗봇처럼 정보 버전이 자주 바뀌고 knowledge conflict가 치명적인 도메인의 AI 시스템 개발자 및 연구자 |
+| Pain Point (해결할 문제) | RAG가 최신 문서를 검색해 제공해도 LLM이 학습 시 습득한 구버전 지식을 고집하거나, 반대로 신뢰할 수 없는 문서를 맹신해 오답을 생성하는 문제. 기존 PA-RAG는 informativeness·robustness·citation quality를 다루지만 context–memory conflict를 명시적 정렬 축으로 다루지 않는다. |
+| 사용 기술 | PyTorch, HuggingFace Transformers, LoRA/PEFT, DPO/TRL, FAISS, Sentence-Transformers, Llama 3.1-8B, Gradio (HuggingFace Spaces 데모), Python Telegram Bot (Railway 배포) |
+| 개발환경 | Python 3.10+, GPU 환경 (Google Colab / 로컬 MPS), HuggingFace Spaces (인터랙티브 데모), Railway (텔레그램 봇 서버 배포) |
+| 사용하는 소프트웨어 URL | 인터랙티브 데모: https://huggingface.co/spaces/ponyo03/conflict-aware-rag-demo<br>연구 사이트: http://alltology.zapto.org<br>PyTorch: https://pytorch.org/<br>PEFT/LoRA: https://github.com/huggingface/peft<br>TRL/DPO: https://github.com/huggingface/trl<br>FAISS: https://github.com/facebookresearch/faiss<br>Llama 3.1: https://llama.meta.com/ |
+| 기대 효과 | 파일럿 실험에서 Conflict-Aware Prompting이 거짓 문서 거부율을 75%→100%로 향상시킴을 확인(gpt-4o-mini 기준). DPO+LoRA로 내재화 시 프롬프트 없이도 강건한 conflict 처리가 가능할 것으로 기대. 기업·의료·법률 도메인 RAG 시스템의 신뢰성 향상에 기여. |
 | GitHub Repo | [https://github.com/Ontology0/Graduation-Project](https://github.com/Ontology0/Graduation-Project) |
-| Team Ground Rule |  [Team Ground Rule](https://github.com/ontology0/Graduation-Project/blob/main/Team_Ground_Rule.md) |
-| 최종수정일 | 2026/03/11 |
+| Team Ground Rule | [Team Ground Rule](https://github.com/Ontology0/Graduation-Project/blob/main/CONTRIBUTING.md) |
+| 최종수정일 | 2026.06.01 |
 
 [↑ 목록으로](#2026-spring-전체-프로젝트-리스트)
 
